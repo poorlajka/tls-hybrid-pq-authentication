@@ -1,0 +1,1 @@
+/home/viktor/tls-hybrid-authentication_cpy/mbedtls/tests/compat.sh
