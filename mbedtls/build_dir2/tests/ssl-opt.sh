@@ -1,1 +1,0 @@
-/home/viktor/tls-hybrid-authentication/mbedtls/tests/ssl-opt.sh

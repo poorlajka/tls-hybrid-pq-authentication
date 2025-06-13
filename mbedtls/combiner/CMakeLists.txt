@@ -61,7 +61,7 @@ set(WRAPPERS_INCLUDE
     Build combiner
 ]]
 add_library(
-    ${PROJECT_NAME} STATIC
+    ${PROJECT_NAME} SHARED
     combiner.c
 )
 
@@ -116,25 +116,3 @@ target_link_libraries(combiner_size_gen PRIVATE
 target_include_directories(combiner_size_gen PRIVATE 
     .
 )
-
-#[[
-add_test(
-    run_combiner_test
-    combiner_test
-)
-]]
-
-install(TARGETS mayo_5
-    EXPORT MbedTLSTargets
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
-
-install(TARGETS less_lib mayo_5_nistapi
-    EXPORT MbedTLSTargets
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
-
-install(TARGETS ${WRAPPERS}
-    EXPORT MbedTLSTargets
-    DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    PERMISSIONS OWNER_READ OWNER_WRITE GROUP_READ WORLD_READ)
